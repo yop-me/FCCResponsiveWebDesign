@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Registration Survey</h1>
+    <p id="description">Hello! Please fill out this form with the required information.</p>
+
+    <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+      <fieldset>
+        <label for="name" id="name-label">Enter Your Name:</label>
+        <input id="name" name="first-name" type="text" required placeholder="Write your name here..." />
+        
+        <label for="email" id="email-label">Enter Your Email:</label>
+        <input id="email" name="email" type="email" required placeholder="Write your email here..." />
+
+        <label for="number" id="number-label">Enter Your Phone:</label>
+        <input id="number" name="number" type="number" required placeholder="Enter your phone number" min="0" max="99999999" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Select an account type (required)</legend>
+        <label for="personal-account">
+          <input id="personal-account" type="radio" name="account-type" class="inline" checked value="Personal" /> Personal
+        </label>
+        <label for="business-account">
+          <input id="business-account" type="radio" name="account-type" class="inline" value="Business" /> Business
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Was this useful?</legend>
+        <label>
+          <input name="prefer" value="yes" type="checkbox" class="input-checkbox"> Yes 
+        </label>
+        <label>
+          <input name="prefer" value="ok" type="checkbox" class="input-checkbox"> It was Ok 
+        </label>
+        <label>
+          <input name="prefer" value="a-little" type="checkbox" class="input-checkbox"> A lil bit 
+        </label>
+        <label>
+          <input name="prefer" value="not-much" type="checkbox" class="input-checkbox"> Not that much 
+        </label>
+        <label>
+          <input name="prefer" value="not-at-all" type="checkbox" class="input-checkbox"> Not at all 
+        </label>
+      </fieldset>
+
+      <fieldset>
+
+        <label for="referrer">How did you hear about us?</label>
+        <select id="dropdown" name="referrer">
+          <option value="">(select one)</option>
+          <option value="1">freeCodeCamp News</option>
+          <option value="2">freeCodeCamp YouTube Channel</option>
+          <option value="3">freeCodeCamp Forum</option>
+          <option value="4">Other</option>
+        </select>
+
+        <label for="bio">Provide a bio:</label>
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I like coding on the beach..."></textarea>
+      </fieldset>
+
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
